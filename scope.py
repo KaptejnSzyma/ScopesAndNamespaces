@@ -7,5 +7,14 @@ def fact(n):
     return result
 
 
+def factorial(n):
+    # n! can also be defined as (n * n-1)!
+    """" calculate n! recursively """
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+
 for i in range(130):
-    print(i, fact(i))
+    print(i, factorial(i))
