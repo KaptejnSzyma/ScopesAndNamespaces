@@ -1,5 +1,5 @@
 def fact(n):
-    """" calculate n! ireratively """
+    """ calculate n! ireratively """
     result = 1
     if n > 1:
         for f in range(2, n+1):
@@ -9,12 +9,20 @@ def fact(n):
 
 def factorial(n):
     # n! can also be defined as (n * n-1)!
-    """" calculate n! recursively """
+    """ calculate n! recursively """
     if n <= 1:
         return 1
     else:
         return n * factorial(n-1)
 
 
-for i in range(130):
-    print(i, factorial(i))
+def fib(n):
+    """ F(n) = F(n-1) + F(n-2)"""
+    if n < 2:
+        return n
+    else:
+        return fib(n-1) + fib(n-2)
+
+
+for i in range(36):
+    print(i, fib(i))
