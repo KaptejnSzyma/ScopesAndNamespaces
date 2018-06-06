@@ -4,6 +4,7 @@ import os
 def list_directories(s):
 
     def dir_list(d):
+        nonlocal tab_stop
         files = os.listdir(d)
         for f in files:
             current_dir = os.path.join(d, f)
@@ -23,10 +24,4 @@ def list_directories(s):
         print(s + " does not exist")
 
 
-listing = os.walk(',')
-for root, directories, files in listing:
-    print(root)
-    for d in directories:
-        print(d)
-    for file in files:
-        print(file)
+list_directories('.')
