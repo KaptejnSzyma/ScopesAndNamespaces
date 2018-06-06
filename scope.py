@@ -23,6 +23,7 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
+
 def fibonacci(n):
     if n == 0:
         result = 0
@@ -31,7 +32,7 @@ def fibonacci(n):
     else:
         n_minus1 = 1
         n_minus2 = 0
-        for f in range(1, n+1):
+        for f in range(1, n):
             result = n_minus2 + n_minus1
             n_minus2 = n_minus1
             n_minus1 = result
@@ -39,4 +40,4 @@ def fibonacci(n):
 
 
 for i in range(36):
-    print(i, fibonacci(i))
+    print(i, fib(i), "\t", fibonacci(i))
