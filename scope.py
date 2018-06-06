@@ -3,7 +3,7 @@ def fact(n):
     result = 1
     if n > 1:
         for f in range(2, n+1):
-            result += f
+            result *= f
     return result
 
 
